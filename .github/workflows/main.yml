@@ -29,6 +29,6 @@ jobs:
       # Publish
       - name: publish on version change
         id: publish_nuget
-        uses: LlbAdmin/master
+        uses: LlbAdmin/littlelogbook.data.sqlconnectivity/master
         with:
           PROJECT_FILE_PATH: littlelogbook.data.sqlconnectivity.csproj

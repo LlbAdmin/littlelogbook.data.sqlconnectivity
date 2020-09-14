@@ -26,5 +26,5 @@ jobs:
       - name: Publish LittleLogBook.Data.SqlConnectivity
         uses: rohith/publish-nuget@v2
         with:
-          PROJECT_FILE_PATH: littlelogbook.data.sqlconnectivity.csproj
+          PROJECT_FILE_PATH: LittleLogBook.Data.SqlConnectivity.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}

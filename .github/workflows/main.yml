@@ -27,7 +27,7 @@ jobs:
         uses: dlemstra/code-sign-action@v1
         with:
           certificate: '${{ secrets.CERTIFICATE }}'
-          folder: ''
+          folder: '.'
           recursive: true
             
       - name: Publish LittleLogBook.Data.SqlConnectivity

@@ -2,7 +2,7 @@ name: publish to nuget
 
 on:
   push:
-    branches: [ master ]
+    branches: master
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
         
       - name: Publish LittleLogBook.Data.SqlConnectivity
-        uses: LlbAdmin/publish-nuget@v2.5.2
+        uses: LlbAdmin/publish-nuget@v2
         with:
           PROJECT_FILE_PATH: littlelogbook.data.sqlconnectivity.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}

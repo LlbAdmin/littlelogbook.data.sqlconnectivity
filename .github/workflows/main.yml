@@ -9,9 +9,6 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Debug1
-        run: Get-ChildItem
-
       - name: Checkout repository
         uses: actions/checkout@v2
         
@@ -35,6 +32,12 @@ jobs:
           folder: '.'
           recursive: true
       
+      - name: dump certs
+        run: certutil -store
+
+      - name: debug
+        run: '${{ env.TEMP }}'
+        
       - name: Package
         run: dotnet pack  --no-build -c Release LittleLogBook.Data.SqlConnectivity.csproj -o .
         

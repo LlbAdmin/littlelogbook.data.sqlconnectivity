@@ -31,9 +31,18 @@ jobs:
           certificatesha1: '${{ secrets.CERTIFICATE_SHA1HASH }}'
           folder: '.'
           recursive: true
+      
+      - name: Package
+        run: dotnet pack  --no-build -c Release LittleLogBook.Data.SqlConnectivity.csproj -o .
             
-      - name: Publish LittleLogBook.Data.SqlConnectivity
-        uses: rohith/publish-nuget@v2
+      - name: Sign
+        uses: DanaBear/code-sign-action@v4
         with:
-          PROJECT_FILE_PATH: LittleLogBook.Data.SqlConnectivity.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          certificate: '${{ secrets.CERTIFICATE }}'
+          password: '${{ secrets.CERTIFICATE_PASSWORD }}'
+          certificatesha1: '${{ secrets.CERTIFICATE_SHA1HASH }}'
+          folder: '.'
+          recursive: true
+
+      - name: NuGet push
+        run: dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate -n 1

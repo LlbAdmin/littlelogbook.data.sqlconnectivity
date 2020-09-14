@@ -39,7 +39,7 @@ jobs:
         run: dotnet pack  --no-build -c Release LittleLogBook.Data.SqlConnectivity.csproj -o .
         
       - name: Nuget Sign
-        run: nuget sign *.nupkg -CertificateFingerprint ${{ secrets.CERTIFICATE_SHA1HASH }} -CertificatePassword '${{ secrets.CERTIFICATE_PASSWORD }}' -CertificatePath ${{ env.TEMP }}
+        run: nuget sign *.nupkg -CertificateFingerprint ${{ secrets.CERTIFICATE_SHA1HASH }} -CertificatePassword '${{ secrets.CERTIFICATE_PASSWORD }}'
 
       - name: NuGet push
         run: dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate -n 1

@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
         <Platforms>x64;AnyCPU</Platforms>
         <RuntimeIdentifiers>win7-x64</RuntimeIdentifiers>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

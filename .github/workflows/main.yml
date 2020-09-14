@@ -27,7 +27,6 @@ jobs:
         uses: dlemstra/code-sign-action@v1
         with:
           certificate: '${{ secrets.CERTIFICATE }}'
-          password: Swanson123
           folder: '.'
           recursive: true
             

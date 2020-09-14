@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Debug1
-        run: echo 'GITHUB_WORKSPACE=${{ GITHUB_WORKSPACE }}; TEMPPATH=${{ %TEMP% }}'
+        run: Get-ChildItem
 
       - name: Checkout repository
         uses: actions/checkout@v2

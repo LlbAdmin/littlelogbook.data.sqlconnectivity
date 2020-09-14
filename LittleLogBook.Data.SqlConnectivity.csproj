@@ -17,9 +17,14 @@
         <RepositoryUrl>https://github.com/LlbAdmin/littlelogbook.data.sqlconnectivity</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <Authors>littlelogbook</Authors>
+        <Product>Little LogBook</Product>
+        <PackageProjectUrl>https://github.com/littlelogbook/littlelogbook.data.sqlconnectivity</PackageProjectUrl>
+        <Copyright>Mbeleni Data Solutions 2020</Copyright>
+        <Description>This is a wrapper library which manages SqlClient objects which access a physical database using a connectionstring</Description>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All"/>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
         <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
     </ItemGroup>
     <ItemGroup>

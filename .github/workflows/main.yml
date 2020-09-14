@@ -28,6 +28,7 @@ jobs:
         with:
           certificate: '${{ secrets.CERTIFICATE }}'
           password: '${{ secrets.CERTIFICATE_PASSWORD }}'
+          certificatesha1: '${{ secrets.CERTIFICATE_SHA1HASH }}'
           folder: '.'
           recursive: true
             

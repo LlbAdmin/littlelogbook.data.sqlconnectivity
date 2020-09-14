@@ -23,6 +23,13 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
         
+      - name: Sign
+        uses: dlemstra/code-sign-action@v1
+        with:
+          certificate: '${{ secrets.CERTIFICATE }}'
+          folder: 'files'
+          recursive: true
+            
       - name: Publish LittleLogBook.Data.SqlConnectivity
         uses: rohith/publish-nuget@v2
         with:

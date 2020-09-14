@@ -27,7 +27,7 @@ jobs:
         uses: DanaBear/code-sign-action@v4
         with:
           certificate: '${{ secrets.CERTIFICATE }}'
-          password: '${{ secrets.PASSWORD }}'
+          password: '${{ secrets.CERTIFICATE_PASSWORD }}'
           certificatesha1: '${{ secrets.CERTIFICATE_HASH }}'
           folder: '.'
           recursive: true
